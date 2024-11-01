@@ -20,7 +20,13 @@
 <P>Once you have that information, you can call the scrape_data() function as pass those values as parameters</P>
 <br>
 
-scrape_data(url="", name_tag="", name_class="", price_tag="", price_class="")
+scrape_data(
+        url="https://www.costco.com/diet-nutrition.html", 
+        name_tag="span", 
+        name_class="description", 
+        price_tag="div", 
+        price_class="price"
+    )
 
 <br>
 <h3>Limitations</h3>
