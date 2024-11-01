@@ -2,22 +2,26 @@
 import requests
 from bs4 import BeautifulSoup
 
-# Creates a function top scrape data
+# Defines a function to scrape data
 def scrape_data():
-  
-    # The target webpage url
+
+    # The target webpage
     url = "https://news.ycombinator.com/"
+
+    # Creates a variable (response) to store the results of the HTTP GET request
     response = requests.get(url)
 
-    # Checks if the request was successful
+    # Checks if the request was successful (200 status code)
     if response.status_code == 200:
+
+        # If successful, parse the content using BeautifulSoup
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        # Print a sample of the HTML content to identify the correct class name
-        print(soup.prettify()[:1000])  # Print the first 1000 characters for inspection
+        # Prints the first 1000 characters of the HTML content for inspection
+        print(soup.prettify()[:1000])
 
         # Extract the data (use the correct selector)
-        titles = soup.find_all('span', class_='titleline')  # Ensure this matches the actual class name
+        titles = soup.find_all('span', class_='titleline')
 
         # Print the extracted titles
         if titles:
