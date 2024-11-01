@@ -53,6 +53,7 @@ def scrape_costco_data():
         for i, product in enumerate(products, 1):
             print(f"{i}. {product['name']} - {product['price']}")
 
+    # If not successful, show the error
     else:
         print(f"Failed to retrieve the webpage. Status code: {response.status_code}")
 
