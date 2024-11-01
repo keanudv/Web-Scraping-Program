@@ -8,8 +8,13 @@ def scrape_costco_data():
     # The target webpage
     url = "https://www.costco.com/diet-nutrition.html"
 
-    # Headers to mimic a browser request
+    # Headers to mimic a real browser request
     headers = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"}
+
+    '''
+    This is needed because some sites block requests that do not come from a real user's browser.
+    By changing the headers to include a User-Agent string, we can bypass the restrictions.
+    '''
 
     # Creates a variable (response) to store the results of the HTTP GET request
     response = requests.get(url, headers=headers)
@@ -29,11 +34,11 @@ def scrape_costco_data():
         # Loops through each product to extract the name and price
         for product in product_containers:
             # Extract the product name
-            html_name_element = product.find("span", class="description")
+            html_name_element = product.find("span", class_="description") # Match the html tags
             name = html_name_element.text.strip() if html_name_element else "Name Not Found"
 
             # Extract the product price
-            html_price_element = product.find("div", class_="price")
+            html_price_element = product.find("div", class_="price") # Match the html tags
             price = html_price_element.text.strip() if html_price_element else "Price Not Found"
 
             # Add the product name and price to the empty list
