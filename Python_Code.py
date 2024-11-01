@@ -6,16 +6,22 @@ from bs4 import BeautifulSoup
 def scrape_data():
 
     # The target webpage
-    url = "https://news.ycombinator.com/"
+    url = "https://www.costco.com/diet-nutrition.html"
+
+    # Headers to mimic a browser request
+    headers = {"'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/93.0.4577.63 Safari/537.36"}
 
     # Creates a variable (response) to store the results of the HTTP GET request
-    response = requests.get(url)
+    response = requests.get(url, headers=headers)
 
     # Checks if the request was successful (200 status code)
     if response.status_code == 200:
 
         # If successful, parse the content using BeautifulSoup
         soup = BeautifulSoup(response.text, 'html.parser')
+
+        # Looks for product descriptions by class name
+        product_elements = soup.find_all('span', class_='description')
 
         # Prints the first 1000 characters of the HTML content for inspection
         print(soup.prettify()[:1000])
