@@ -15,11 +15,10 @@
 </ol>
 <br>
 <h3>Example</h3>
-<p>For the Costco webpage, you need to obtain the URL, product name tag and class, and the price tag and class by inspecting the HTML code.</p>
+<p>For the Costco webpage, you need to obtain the URL, product name tag and class, and product price tag and class by inspecting the HTML code.</p>
 <br>
-<P>Once you have that information, you can call the scrape_data() function as pass those values as parameters</P>
+<P>Once you have that information, you can call the scrape_data() function as pass those values as parameters (see the code below).</P>
 <br>
-
 scrape_data(
         url="https://www.costco.com/diet-nutrition.html", 
         name_tag="span", 
@@ -27,11 +26,10 @@ scrape_data(
         price_tag="div", 
         price_class="price"
     )
-
 <br>
 <h3>Limitations</h3>
 <P>Some websites use JavaScript to dynamically load data. The packages used in this program (Requests and BeautifulSoup) cannot execute JavaScipt. Therefore, the program may fail to retrieve data.</P><br>
-<P>This program can only scrape data from one page (Pagination). Data for all products exist on multiple pages. Therefore, the program will fail to retrieve all product data.</P>
+<P>In addition, this program can only scrape data from one page at a time (Pagination). Therefore, the program will fail to retrieve data from multiple pages.</P>
 <br>
 <h3>Improvements</h3>
 <P>To overcome these limitations, I will expand the program to use Selenium. Selenium is a package that automates a web browser to load JavaScipt and flip to the next page or load more data.</P>
