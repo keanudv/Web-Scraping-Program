@@ -15,7 +15,12 @@
 </ol>
 <br>
 <h3>Example</h3>
-<p>For the Costco webpage, </p>
+<p>For the Costco webpage, you need to obtain the URL, product name tag and class, and the price tag and class by inspecting the HTML code.</p>
+<P>Once you have that information, you can call the scrape_data() function as pass those values as parameters</P>
+<br>
+
+scrape_data(url="", name_tag="", name_class="", price_tag="", price_class="")
+
 <br>
 <h3>Limitations</h3>
 <P>Some websites use JavaScript to dynamically load data. The packages used in this program (Requests and BeautifulSoup) cannot execute JavaScipt. Therefore, the program may fail to retrieve data.</P><br>
