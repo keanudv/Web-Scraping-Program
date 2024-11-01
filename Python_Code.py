@@ -65,9 +65,29 @@ def scrape_data(url, name_tag, name_class, price_tag, price_class):
 # Run the function to scrape the data
 if __name__ == "__main__":
     scrape_data(
+        url="target URL", 
+        name_tag="html name tag", 
+        name_class="html name class", 
+        price_tag="html price tag", 
+        price_class="html price class"
+    )
+
+# Costco example
+if __name__ == "__main__":
+    scrape_data(
         url="https://www.costco.com/diet-nutrition.html", 
         name_tag="span", 
         name_class="description", 
         price_tag="div", 
         price_class="price"
+    )
+
+# Foodland example
+if __name__ == "__main__":
+    scrape_data(
+        url="https://shop.foodland.com/sm/planning/rsid/11/categories/fruits-vegetables/fresh-fruits-id-47", 
+        name_tag="div", 
+        name_class="ProductCardstyles__DivKeyboardHandled-sc-fhu8gl-0 cjvWLW", 
+        price_tag="span",
+        price_class="ProductCardPrice--1sznkcp jwMPxX"
     )
