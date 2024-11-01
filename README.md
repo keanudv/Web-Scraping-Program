@@ -19,13 +19,7 @@
 <br>
 <P>Once you have that information, you can call the scrape_data() function as pass those values as parameters (see the code below).</P>
 <br>
-<P>scrape_data(
-        url="https://www.costco.com/diet-nutrition.html", 
-        name_tag="span", 
-        name_class="description", 
-        price_tag="div", 
-        price_class="price"
-    )</P>
+<P>scrape_data(url="https://www.costco.com/diet-nutrition.html", name_tag="span", name_class="description", price_tag="div", price_class="price")</P>
 <br>
 <h3>Limitations</h3>
 <P>Some websites use JavaScript to dynamically load data. The packages used in this program (Requests and BeautifulSoup) cannot execute JavaScipt. Therefore, the program may fail to retrieve data.</P><br>
