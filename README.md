@@ -14,3 +14,6 @@
       <li>The HTML price name</li>
 </ol>
 <br>
+<h3>Example</h3>
+<p>For the Costco webpage</p>
+
