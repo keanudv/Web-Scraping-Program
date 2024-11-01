@@ -16,9 +16,10 @@
 <br>
 <h3>Example</h3>
 <p>For the Costco webpage, </p>
-
-
-
 <br>
 <h3>Limitations</h3>
-<P>This program is limited to </P>
+<P>Some websites use JavaScript to dynamically load data. The packages used in this program (Requests and BeautifulSoup) cannot execute JavaScipt. Therefore, the program may fail to retrieve data.</P><br>
+<P>This program can only scrape data from one page (Pagination). Data for all products exist on multiple pages. Therefore, the program will fail to retrieve all product data.</P>
+<br>
+<h3>Improvements</h3>
+<P>To overcome these limitations, I will expand the program to use Selenium. Selenium is a package that automates a web browser to load JavaScipt and flip to the next page or load more data.</P>
