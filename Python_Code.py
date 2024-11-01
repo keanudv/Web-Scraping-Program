@@ -15,7 +15,7 @@ def scrape_data(url, name_tag, name_class, price_tag, price_class):
     5. price_class - The HTML class for the price name.
 
     Returns:
-    - Show the name and price of each product that shows on a website.
+    Show the name and price of each product that appears on a webpage.
     '''
 
     # Headers to mimic a real browser request
