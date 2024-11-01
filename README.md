@@ -15,5 +15,9 @@
 </ol>
 <br>
 <h3>Example</h3>
-<p>For the Costco webpage</p>
+<p>For the Costco webpage, </p>
 
+
+
+<br>
+<h3>Limitations</h3>
