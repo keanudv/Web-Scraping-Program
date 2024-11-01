@@ -16,6 +16,7 @@
 <br>
 <h3>Example</h3>
 <p>For the Costco webpage, you need to obtain the URL, product name tag and class, and the price tag and class by inspecting the HTML code.</p>
+<br>
 <P>Once you have that information, you can call the scrape_data() function as pass those values as parameters</P>
 <br>
 
