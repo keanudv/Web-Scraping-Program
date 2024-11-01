@@ -21,3 +21,4 @@
 
 <br>
 <h3>Limitations</h3>
+<P>This program is limited to </P>
