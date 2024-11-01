@@ -11,7 +11,7 @@
       <li>The HTML name tag.</li>
       <li>The HTML name class.</li>
       <li>The HTML price tag.</li>
-      <li>The HTML price name.</li>
+      <li>The HTML price class.</li>
 </ol>
 <br>
 <h3>Example</h3>
