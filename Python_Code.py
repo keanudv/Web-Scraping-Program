@@ -40,7 +40,7 @@ def scrape_data(url, name_tag, name_class, price_tag, price_class):
         # Loops through each product to extract the name and price
         for product in soup.find_all(name_tag, class_=name_class):
             # Extracts the product name
-            name = product.text.strip() if product else "Name Not Found"
+            name = product.contents[0].strip() if product else "Name Not Found"
 
             # Extracts the product price
             price_element = product.find_next(price_tag, class_=price_class)
@@ -61,26 +61,6 @@ def scrape_data(url, name_tag, name_class, price_tag, price_class):
     # If not successful, show the error
     else:
         print(f"Failed to retrieve the webpage. Status code: {response.status_code}")
-
-# Run the function to scrape the data
-if __name__ == "__main__":
-    scrape_data(
-        url="target URL", 
-        name_tag="html name tag", 
-        name_class="html name class", 
-        price_tag="html price tag", 
-        price_class="html price class"
-    )
-
-# Costco example
-if __name__ == "__main__":
-    scrape_data(
-        url="https://www.costco.com/diet-nutrition.html", 
-        name_tag="span", 
-        name_class="description", 
-        price_tag="div", 
-        price_class="price"
-    )
 
 # Foodland example
 if __name__ == "__main__":
