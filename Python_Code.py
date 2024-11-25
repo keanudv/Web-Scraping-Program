@@ -62,12 +62,12 @@ def scrape_data(url, name_tag, name_class, price_tag, price_class):
     else:
         print(f"Failed to retrieve the webpage. Status code: {response.status_code}")
 
-# Foodland example
+# Foodland example: Scrapes the Product Name and Price per Pound Data
 if __name__ == "__main__":
     scrape_data(
         url="https://shop.foodland.com/sm/planning/rsid/11/categories/fruits-vegetables/fresh-fruits-id-47", 
         name_tag="div", 
         name_class="ProductCardstyles__DivKeyboardHandled-sc-fhu8gl-0 cjvWLW", 
         price_tag="span",
-        price_class="ProductCardPrice--1sznkcp jwMPxX"
+        price_class="ProductCardPriceInfo--18y10ci bWqNFy"
     )
